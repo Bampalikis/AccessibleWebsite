@@ -1,0 +1,519 @@
+/* style.css - Complete Code */
+
+/* Basic Reset & Font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif; /* Default font */
+    line-height: 1.7;
+    color: #333; /* Text on light backgrounds */
+    background-color: #000000;
+    background-image: url('underwater\ blue.jpg'); /* Ensure you have this image or replace */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    transition: font-family 0.3s ease-out; /* Smooth font transition */
+}
+
+/* Screen Reader Only Utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Container Utility */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+#main-header {
+    background-color: rgba(10, 35, 66, 0.9); /* Effective: #0a2342 */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+#main-header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    order: 1; /* Logo first */
+    padding: 5px 0; 
+    white-space: nowrap; /* Prevent logo from wrapping if space is tight */
+}
+
+/* NEW: Direct Header Navigation Buttons Styling */
+.header-direct-nav {
+    order: 2; /* Places it after the logo in flex order */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between the direct buttons */
+    margin-left: 20px; /* Space after the logo */
+    margin-right: 15px; /* Space before the hamburger toggle */
+}
+
+.header-direct-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    white-space: nowrap; 
+}
+
+.header-direct-btn:hover,
+.header-direct-btn:focus {
+    background-color: #06162F; 
+    border-color: #a8d8ff; 
+}
+
+/* Header Toggle Button (Hamburger/X) - Order updated */
+#header-toggle-btn {
+    display: block; 
+    background: none;
+    border: 1px solid transparent; 
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+    order: 3; /* Ensure it comes after direct-nav buttons */
+    margin-left: auto; /* Pushes it to the far right, after other flex items */
+    transition: border-color 0.3s ease;
+}
+#header-toggle-btn:hover {
+    border-color: #a8d8ff; 
+}
+
+#header-toggle-btn .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#header-toggle-btn[aria-expanded="true"] .icon-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+#header-toggle-btn[aria-expanded="true"] .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+#header-toggle-btn[aria-expanded="true"] .icon-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* Main Navigation (Hamburger Menu Content) */
+#main-nav {
+    list-style: none;
+    width: 100%; 
+    order: 4; /* Ensure it's last in the flex order for wrapping */
+    overflow: hidden;
+    opacity: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: max-height 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+                opacity 0.3s ease-in-out 0.05s,
+                padding-top 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+                padding-bottom 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#main-nav.nav-collapsed {
+    max-height: 0 !important;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    pointer-events: none;
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    padding-left: 0; 
+    margin: 0; 
+}
+
+#main-nav ul li a {
+    color: #fff; 
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li a:focus {
+    background-color: #06162F; 
+    transform: translateY(-2px);
+}
+#main-nav ul li a:active {
+    transform: translateY(0);
+}
+
+
+/* Hero Section */
+#hero {
+    height: 65vh;
+    min-height: 400px;
+    background: url('images/jellyfish_manowar_hero.jpg') no-repeat center center/cover; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; 
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); 
+    z-index: 1;
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+#hero p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
+}
+
+/* --- Main Content Area --- */
+.content-area {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.content-section {
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden; 
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+.content-section h2 {
+    color: #0a2342; 
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #a8d8ff; 
+    padding-bottom: 10px;
+}
+
+.content-section p,
+.content-section li { 
+    margin-bottom: 15px;
+    color: #333; 
+}
+
+.content-section ul,
+.content-section ol {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.content-section ul li, 
+.content-section ol li {
+    margin-bottom: 8px;
+}
+
+strong {
+    color: #1d4a7e; 
+}
+
+.content-image {
+    display: block;
+    max-width: 45%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+}
+
+.float-left { float: left; margin-right: 25px; margin-left: 0; }
+.float-right { float: right; margin-left: 25px; margin-right: 0; }
+.clear-fix::after { content: ""; clear: both; display: table; }
+.content-image:not(.float-left):not(.float-right) { margin-left: auto; margin-right: auto; max-width: 60%; float: none; }
+
+#main-footer {
+    background-color: rgba(10, 35, 66, 0.9); 
+    color: #ccc; 
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+#main-footer p {
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+/* --- Accessibility Controls Styling --- */
+#accessibility-controls {
+    background-color: rgba(10, 35, 66, 0.9); 
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#accessibility-controls h2 {
+    color: #fff; 
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #a8d8ff; 
+    padding-bottom: 8px;
+}
+
+#accessibility-controls .control-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+#accessibility-controls label {
+    font-weight: bold;
+    color: #eee; 
+    margin-right: 5px;
+}
+#accessibility-controls label[for="voice-select"],
+#accessibility-controls label.font-family-label {
+    min-width: auto;
+    margin-top: 5px;
+}
+
+#accessibility-controls button {
+    background-color: #0a2342; 
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#accessibility-controls select {
+    padding: 7px 6px;
+    border-radius: 4px;
+    border: 1px solid #a8d8ff; 
+    background-color: #fff; 
+    color: #333; 
+    min-width: 150px;
+    font-size: 0.9em;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#accessibility-controls button:hover {
+    background-color: #06162F; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#accessibility-controls button:active {
+     background-color: #06162F; 
+     transform: translateY(0);
+     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+#accessibility-controls button:disabled {
+    background-color: #555;
+    color: #aaa; 
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- COLLAPSIBLE SECTION STYLING (e.g., for Keyboard Help) --- */
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; 
+}
+
+.collapsible-header h2 {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.collapsible-toggle-btn {
+    background: none;
+    border: 1px solid #1d4a7e; 
+    color: #0a2342; 
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em; 
+    line-height: 1;
+    margin-left: 10px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.collapsible-toggle-btn:hover,
+.collapsible-toggle-btn:focus { 
+    background-color: #e0efff; 
+    border-color: #0a2342; 
+}
+
+.collapsible-toggle-btn .toggle-icon::before {
+    content: '+'; 
+    display: inline-block;
+    font-weight: bold;
+    min-width: 1em; 
+    text-align: center;
+}
+
+.collapsible-toggle-btn[aria-expanded="true"] .toggle-icon::before {
+    content: '−'; 
+}
+
+.collapsible-content {
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.35s ease-in-out,
+                opacity 0.3s ease-in-out 0.05s;
+}
+
+.collapsible-content.collapsed {
+    max-height: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#keyboard-help h2 { font-size: 1.5em; }
+#keyboard-help-content p { font-size: 0.9em; }
+#keyboard-help-content ul { margin-left: 20px; font-size: 0.9em; }
+#keyboard-help-content ul li { margin-bottom: 5px; }
+
+/* --- Enhanced Focus Styles (Accessibility) --- */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+    outline: 3px solid #0a2342; 
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px rgba(10, 35, 66, 0.5); 
+}
+
+#header-toggle-btn:focus { 
+    border-color: #0a2342; 
+}
+.header-direct-btn:focus { /* Ensure direct buttons get clear focus */
+    background-color: #06162F;
+    border-color: #0a2342;
+    /* Outline and box-shadow will be inherited */
+}
+
+
+#accessibility-controls button:focus { 
+    background-color: #06162F; 
+}
+#accessibility-controls select:focus {
+    border-color: #0a2342; 
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #main-nav ul { flex-direction: column; align-items: stretch; justify-content: flex-start; }
+    #main-nav ul li { margin: 0; }
+    #main-nav ul li a { display: block; padding: 12px 15px; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: center; transform: none; }
+    #main-nav ul li:last-child a { border-bottom: none; }
+    #main-nav ul li a:hover,
+    #main-nav ul li a:focus { background-color: #06162F; }
+
+    .header-direct-nav {
+        display: none; /* Hide direct buttons on smaller screens */
+    }
+    #main-header .logo { 
+        font-size: 1.6em; 
+        flex-grow: 1; /* Allow logo to take more space if direct nav is gone */
+    }
+    #header-toggle-btn {
+        margin-left: 15px; /* Keep some space from the logo if it grows */
+    }
+
+
+    #hero { height: 50vh; min-height: 300px; }
+    #hero h1 { font-size: 2.2em; }
+    #hero p { font-size: 1em; }
+    .content-section h2 { font-size: 1.7em; }
+    #keyboard-help h2 { font-size: 1.4em; }
+    .content-image.float-left, .content-image.float-right { float: none; max-width: 80%; margin: 15px auto 20px auto; }
+    .content-image:not(.float-left):not(.float-right) { max-width: 80%; }
+    #accessibility-controls h2 { font-size: 1.3em; }
+    #accessibility-controls .control-group { align-items: flex-start; }
+    #accessibility-controls label { min-width: auto; margin-bottom: 5px; }
+    #accessibility-controls .control-group br { display: none; }
+}
+
+@media (max-width: 480px) {
+    #main-header .logo { font-size: 1.4em; }
+    #hero h1 { font-size: 1.8em; }
+    .content-section { padding: 20px; }
+    .content-image { max-width: 95%; }
+    #accessibility-controls { padding: 15px 20px; }
+    #accessibility-controls button { padding: 6px 12px; font-size: 0.85em; }
+    #accessibility-controls select { width: 100%; font-size: 0.85em; }
+    .collapsible-header { flex-direction: column; align-items: flex-start; }
+    .collapsible-header h2 { margin-bottom: 10px; }
+    .collapsible-toggle-btn { margin-left: 0; align-self: flex-start; }
+}

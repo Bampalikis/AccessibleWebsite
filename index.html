@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An educational website exploring the fascinating world of jellyfish, with accessibility features.">
+    <title>The World of Jellyfish - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" style="color: #fff; text-decoration: none;">Jellyfish World</a>
+            </div>
+
+            <div class="header-direct-nav">
+                <a href="common-types.html" class="header-direct-btn">Types</a>
+                <a href="how-to-save.html" class="header-direct-btn">Conservation</a>
+                <a href="contact-us.html" class="header-direct-btn">Contact</a>
+            </div>
+
+            <button id="header-toggle-btn" aria-expanded="false" aria-controls="main-nav" title="Toggle Navigation Menu">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Discover the Amazing World of Jellyfish</h1>
+            <p>Explore the biology, life cycle, and unique traits of these ancient marine creatures.</p>
+        </div>
+    </section>
+
+    <main>
+                <div class="container">
+            <div id="keyboard-help" class="content-section">
+                <div class="collapsible-header">
+                    <h2>Keyboard Navigation (Main Menu)</h2>
+                    <button id="keyboard-help-toggle" 
+                            class="collapsible-toggle-btn" 
+                            aria-expanded="false" 
+                            aria-controls="keyboard-help-content">
+                        <span class="sr-only">Toggle Keyboard Navigation Help</span>
+                        <span class="toggle-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="keyboard-help-content" class="collapsible-content">
+                    <p>When the main navigation menu has focus:</p>
+                    <ul>
+                        <li><strong>Arrow Right / Arrow Down:</strong> Move to the next menu item.</li>
+                        <li><strong>Arrow Left / Arrow Up:</strong> Move to the previous menu item.</li>
+                        <li><strong>Home:</strong> Move to the first menu item.</li>
+                        <li><strong>End:</strong> Move to the last menu item.</li>
+                        <li><strong>Enter / Space:</strong> Activate the selected menu item.</li>
+                        <li><strong>Escape (when menu is open):</strong> Close the menu and return focus to the toggle button.</li>
+                    </ul>
+                    <p>Use <strong>Tab</strong> and <strong>Shift + Tab</strong> to move between all focusable elements on the page.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+             <div id="accessibility-controls" class="content-section">
+                 <h2>Accessibility Options</h2>
+                 <div class="control-group">
+                     <label id="font-size-label">Font Size:</label>
+                     <button id="decrease-font" title="Decrease Font Size" aria-labelledby="font-size-label">-</button>
+                     <button id="increase-font" title="Increase Font Size" aria-labelledby="font-size-label">+</button>
+
+                     <label for="font-family-select" class="font-family-label">Font Family:</label>
+                     <select id="font-family-select" title="Change Font Family"></select>
+                 </div>
+                 <div class="control-group">
+                     <label>Text-to-Speech:</label>
+                     <button id="speak-content" title="Read Page Content">Speak</button>
+                     <button id="stop-speak" title="Stop Reading">Stop</button>
+                 </div>
+             </div>
+        </div>
+
+
+        <!-- MAIN CONTENT AREA with ID for TTS -->
+        <div id="main-content" class="container content-area">
+
+            <section id="intro" class="content-section">
+                <h2 tabindex="-1">What Are Jellyfish?</h2>
+                <img src="jellyfish 1.jpg" alt="Several vibrant purple-striped jellyfish with long, delicate tentacles swimming gracefully in clear blue water." class="content-image float-right">
+                <p>Jellyfish, also known as jellies or sea jellies, are fascinating marine animals belonging to the phylum Cnidaria. Despite their name, they aren't actually fish! They are invertebrates, meaning they lack a backbone.</p>
+                <p>They are found in every ocean, from the surface to the deep sea. Some even live in fresh water. Jellyfish have existed for millions of years, possibly even before dinosaurs!</p>
+                <div class="clear-fix"></div>
+            </section>
+
+            <section id="anatomy" class="content-section">
+                <h2 tabindex="-1">Jellyfish Anatomy</h2>
+                <img src="jellyfish 2.jpg" alt="Close-up view of a Mediterranean jellyfish (Cotylorhiza tuberculata), also known as the fried egg jellyfish, showcasing its distinct yellow central dome surrounded by a ring of purple-tipped tentacles." class="content-image float-left">
+                <p>Jellyfish have a relatively simple body structure:</p>
+                <ul>
+                    <li><strong>Bell:</strong> The main body, usually umbrella-shaped.</li>
+                    <li><strong>Tentacles:</strong> Trail down, covered in stinging cells (nematocysts).</li>
+                    <li><strong>Oral Arms:</strong> Help manipulate food towards the mouth.</li>
+                    <li><strong>Stomach (Gastrovascular Cavity):</strong> Simple sac for digestion.</li>
+                    <li><strong>Mesoglea:</strong> The jelly-like substance (up to 95% water!).</li>
+                </ul>
+                <p>They lack brains, hearts, and bones, relying on a simple nerve net.</p>
+                <div class="clear-fix"></div>
+            </section>
+
+            <section id="lifecycle" class="content-section">
+                <h2 tabindex="-1">The Jellyfish Life Cycle</h2>
+                <img src="jellycycle.jpg" alt="This image illustrates the life cycle of a jellyfish, transitioning from a fertilized egg through larval, polyp, and budding stages, ultimately maturing into a free-swimming adult medusa.">
+                <p>Jellyfish have a complex life cycle, often involving two distinct stages:</p>
+                <ol>
+                    <li><strong>Polyp Stage:</strong> A fertilized egg develops into a larva (planula), which settles and grows into a polyp. Polyps can reproduce asexually.</li>
+                    <li><strong>Medusa Stage:</strong> Polyps release tiny, free-swimming ephyrae, which grow into the familiar adult medusa (the 'jellyfish' form).</li>
+                </ol>
+                <p>Some species skip stages or have variations.</p>
+            </section>
+
+            <section id="facts" class="content-section">
+                <h2 tabindex="-1">Interesting Jellyfish Facts</h2>
+                <img src="jellyfish 3.jpg" alt="A striking deep-sea red jellyfish (Tiburonia granrojo) with a large, fleshy bell and short, thick oral arms, illuminated against the dark ocean background." class="content-image">
+                <ul>
+                    <li>Some are bioluminescent (produce light).</li>
+                    <li>The Lion's Mane Jellyfish is the largest.</li>
+                    <li>Box Jellyfish are among the most venomous sea creatures.</li>
+                    <li>A group is called a "bloom," "smack," or "swarm."</li>
+                    <li>Some species (like <em>Turritopsis dohrnii</em>) are biologically immortal.</li>
+                    <li>They eat small fish, plankton, and crustaceans.</li>
+                </ul>
+            </section>
+
+            <section id="species" class="content-section">
+                <h2 tabindex="-1">Common & Notable Species Overview</h2>
+                <img src="jellyfish 4.jpg" alt="A scuba diver observes a very large Lion's Mane jellyfish, its bell expansive and numerous long, reddish-brown tentacles trailing below it in the blue ocean water." class="content-image float-right">
+                <p>Thousands of jellyfish species exist, each with unique characteristics. Here are a few notable examples. For more details on common types, please visit our <a href="common-types.html">Common Types page</a>.</p>
+                <ul>
+                    <li><strong>Moon Jelly (Aurelia aurita):</strong> Common, mild sting.</li>
+                    <li><strong>Lion's Mane (Cyanea capillata):</strong> Largest, painful sting. Found in cold waters.</li>
+                    <li><strong>Box Jellyfish (Cubozoa):</strong> Cube-shaped, highly venomous.</li>
+                    <li><strong>Portuguese Man-of-War (Physalia physalis):</strong> Not a true jelly (a siphonophore), painful sting, has a float.</li>
+                </ul>
+                <div class="clear-fix"></div>
+            </section>
+
+            <section id="habitat" class="content-section">
+                <h2 tabindex="-1">Habitat and Distribution</h2>
+                <img src="jellyfish10.jpg" alt="A diverse group of jellyfish swimming in a sunlit coral reef environment, showcasing various shapes and sizes." class="content-image float-left">
+                <p>Jellyfish are predominantly marine creatures, inhabiting all of the world's oceans. They can be found in a vast range of environments, from the warm, sunlit surface waters of tropical seas to the cold, dark depths of the abyssal zone. Some species are coastal, thriving in estuaries and bays, while others are pelagic, living in the open ocean.</p>
+                <p>A few remarkable species have adapted to freshwater environments, though these are much less common than their saltwater relatives. The distribution of specific jellyfish species is often influenced by water temperature, salinity, currents, and the availability of food. Some are highly localized, while others have a global distribution.</p>
+                <div class="clear-fix"></div>
+            </section>
+
+            <section id="diet" class="content-section">
+                <h2 tabindex="-1">Diet and Feeding Mechanisms</h2>
+                <img src="jellyfish tentacles.jpg" alt="A close-up image of a jellyfish's tentacles capturing small planktonic organisms." class="content-image float-right">
+                <p>Jellyfish are carnivorous, with a diet that typically consists of small aquatic life. This can include zooplankton (like copepods and krill), small fish, fish eggs and larvae, crustaceans, and even other jellyfish. The specific diet varies depending on the jellyfish species, its size, and its habitat.</p>
+                <p>Their primary method of capturing prey involves their tentacles, which are armed with thousands of specialized stinging cells called cnidocytes. Each cnidocyte contains a harpoon-like structure called a nematocyst. When a prey item brushes against a tentacle, these nematocysts discharge, injecting venom that can paralyze or kill the prey. The oral arms then help to maneuver the captured food into the jellyfish's mouth, located on the underside of its bell, leading to the gastrovascular cavity for digestion.</p>
+                <div class="clear-fix"></div>
+            </section>
+
+            <section id="humans" class="content-section">
+                <h2 tabindex="-1">Jellyfish and Humans</h2>
+                <img src="jellyfish aquarium.jpg" alt="Jellyfish in an aquarium, a scientific illustration of a jellyfish, and a warning sign for jellyfish stings on a beach." class="content-image">
+                <p>Humans have a multifaceted relationship with jellyfish. For many, the primary association is with stings, which can range from mildly irritating to extremely painful and, in the case of species like the Box Jellyfish, potentially lethal. Beachgoers in many parts of the world need to be aware of jellyfish warnings.</p>
+                <p>Beyond stings, jellyfish play other roles. In some Asian cultures, certain species of jellyfish are considered a delicacy and are harvested for food. They are often dried and then rehydrated for use in salads and other dishes. Scientifically, jellyfish have been invaluable. For instance, the green fluorescent protein (GFP) originally isolated from the jellyfish <em>Aequorea victoria</em> has become a vital tool in molecular biology for tracking gene expression and protein localization.</p>
+                <p>Ecologically, large jellyfish blooms can have significant impacts, sometimes negative, on human activities. They can clog fishing nets, damage fish farm stocks, and even disrupt the cooling water intakes of power plants. Understanding jellyfish population dynamics is crucial for managing these interactions.</p>
+            </section>
+
+        </div> <!-- /#main-content -->
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <p>© 2025 The World of Jellyfish. Educational Content.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about common types of jellyfish found in oceans around the world.">
+    <title>Common Jellyfish Types - Jellyfish World</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" style="color: #fff; text-decoration: none;">Jellyfish World</a>
+            </div>
+
+            <div class="header-direct-nav">
+                <a href="common-types.html" class="header-direct-btn">Types</a>
+                <a href="how-to-save.html" class="header-direct-btn">Conservation</a>
+                <a href="contact-us.html" class="header-direct-btn">Contact</a>
+            </div>
+
+            <button id="header-toggle-btn" aria-expanded="false" aria-controls="main-nav" title="Toggle Navigation Menu">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" style="background-image: url('jellyfish-species-hero.jpg');">
+        <div class="hero-content">
+            <h1>A Dive into Jellyfish Diversity</h1>
+            <p>Explore some of the most common and fascinating jellyfish species.</p>
+        </div>
+    </section>
+
+    <main>
+                <div class="container">
+            <div id="keyboard-help" class="content-section">
+                <div class="collapsible-header">
+                    <h2>Keyboard Navigation (Main Menu)</h2>
+                    <button id="keyboard-help-toggle" 
+                            class="collapsible-toggle-btn" 
+                            aria-expanded="false" 
+                            aria-controls="keyboard-help-content">
+                        <span class="sr-only">Toggle Keyboard Navigation Help</span>
+                        <span class="toggle-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div id="keyboard-help-content" class="collapsible-content">
+                    <p>When the main navigation menu has focus:</p>
+                    <ul>
+                        <li><strong>Arrow Right / Arrow Down:</strong> Move to the next menu item.</li>
+                        <li><strong>Arrow Left / Arrow Up:</strong> Move to the previous menu item.</li>
+                        <li><strong>Home:</strong> Move to the first menu item.</li>
+                        <li><strong>End:</strong> Move to the last menu item.</li>
+                        <li><strong>Enter / Space:</strong> Activate the selected menu item.</li>
+                        <li><strong>Escape (when menu is open):</strong> Close the menu and return focus to the toggle button.</li>
+                    </ul>
+                    <p>Use <strong>Tab</strong> and <strong>Shift + Tab</strong> to move between all focusable elements on the page.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+             <div id="accessibility-controls" class="content-section">
+                 <h2>Accessibility Options</h2>
+                 <div class="control-group">
+                     <label id="font-size-label">Font Size:</label>
+                     <button id="decrease-font" title="Decrease Font Size" aria-labelledby="font-size-label">-</button>
+                     <button id="increase-font" title="Increase Font Size" aria-labelledby="font-size-label">+</button>
+
+                     <label for="font-family-select" class="font-family-label">Font Family:</label>
+                     <select id="font-family-select" title="Change Font Family"></select>
+                 </div>
+                 <div class="control-group">
+                     <label>Text-to-Speech:</label>
+                     <button id="speak-content" title="Read Page Content">Speak</button>
+                     <button id="stop-speak" title="Stop Reading">Stop</button>
+                 </div>
+             </div>
+        </div>
+        
+        <div id="main-content" class="container content-area">
+            <section id="moon-jelly" class="content-section">
+                <h2 tabindex="-1">Moon Jelly (Aurelia aurita)</h2>
+                <img src="moon-jelly-2-1.jpg" alt="A translucent Moon Jelly with four distinct horseshoe-shaped gonads visible." class="content-image float-left">
+                <p>The Moon Jelly is one of the most common and recognizable jellyfish. They are found in most of the world's oceans and are known for their translucent, saucer-shaped bell, typically 25-40 cm in diameter. Their four horseshoe-shaped gonads are clearly visible through the top of the bell.</p>
+                <p><strong>Sting:</strong> Their sting is very mild, often not felt by humans, or causing only minor irritation. They primarily feed on small plankton and mollusks, which they catch with their short, numerous tentacles.</p>
+                <p><strong>Interesting Fact:</strong> Moon jellies have a complex life cycle, including both polyp and medusa stages, and can reproduce both sexually and asexually.</p>
+                <div class="clear-fix"></div>
+            </section>
+
+            <section id="lions-mane" class="content-section">
+                <h2 tabindex="-1">Lion's Mane Jellyfish (Cyanea capillata)</h2>
+                <img src="lion main jelly.jpg" alt="A large Lion's Mane Jellyfish with a reddish bell and a dense mass of long, trailing tentacles." class="content-image float-right">
+                <p>The Lion's Mane Jellyfish is the largest known species of jellyfish. Its bell can reach diameters of up to 2 meters (6 feet 7 inches), and its tentacles can trail as long as 36.5 meters (120 feet) or more, making it one of the longest known animals.</p>
+                <p><strong>Habitat:</strong> They are typically found in cold, boreal waters of the Arctic, northern Atlantic, and northern Pacific Oceans. They are pelagic, meaning they live in the open sea.</p>
+                <p><strong>Sting:</strong> The sting of a Lion's Mane Jellyfish can be quite painful, causing burning sensations, redness, and muscle cramps. Detached tentacles can remain venomous for some time.</p>
+                <div class="clear-fix"></div>
+            </section>
+
+            <section id="box-jelly" class="content-section">
+                <h2 tabindex="-1">Box Jellyfish (Cubozoa)</h2>
+                <img src="boxjelly.jpg" alt="A Box Jellyfish with its characteristic cube-shaped bell and long tentacles extending from each corner." class="content-image float-left">
+                <p>Box jellyfish are distinguished by their cube-shaped medusae. Some species of box jellyfish produce extremely potent venom: Chironex fleckeri, Carukia barnesi, and Malo kingi are among the most venomous creatures in the world. Stings from these and a few other species in the class are extremely painful and can be fatal to humans.</p>
+                <p><strong>Eyes:</strong> Unlike most jellyfish, box jellyfish have complex eyes with lenses, corneas, and retinas, allowing them to see to some extent. They have 24 eyes in total, grouped in clusters on each side of their bell.</p>
+                <p><strong>Habitat:</strong> They are predominantly found in tropical and subtropical coastal waters around the world.</p>
+                <div class="clear-fix"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <p>© 2025 The World of Jellyfish. Educational Content.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
